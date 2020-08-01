@@ -9,7 +9,11 @@ import { Satellite } from '../satellite';
 export class OrbitListComponent implements OnInit {
   @Input() satellites: Satellite[];
 
-  constructor() { }
+  zebraStripe: boolean;
+
+  constructor() { 
+    this.zebraStripe = false;
+  }
 
   ngOnInit() {
   }
@@ -24,6 +28,10 @@ export class OrbitListComponent implements OnInit {
        }
        return 0;
     });
- }
+  }
+  switchColors():boolean {
+    this.zebraStripe = !this.zebraStripe;
+    return this.zebraStripe;
+  }
 
 }
