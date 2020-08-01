@@ -45,5 +45,5 @@ export class AppComponent {
     // assign this.displayList to be the array of matching satellites
     // this will cause Angular to re-make the table, but now only containing matches
     this.displayList = matchingSatellites;
- }
+  }
 }
